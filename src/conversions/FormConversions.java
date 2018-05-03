@@ -1,15 +1,15 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ *Tyler Rhiger
+ *conversions.java
+ *This program coverts 4 different units that a the user can select
+ *When the user selects a conversion choice they can then enter a value
+ *Click the calculate button and the conversion will appear bellow in the selcted unit
  */
 
 package conversions;
 
-/**
- *
- * @author tyrhi4976
- */
+//formulas for the 4 differnt types of conversions and declaring variables 
+
 public class FormConversions extends javax.swing.JFrame {
         public double InchesToCentimeters (double value) {
         double cent;
@@ -173,9 +173,13 @@ public class FormConversions extends javax.swing.JFrame {
 
     private void convertButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertButtonActionPerformed
 
+        //pulls the value that the user has inputed
+        
         int choice = Integer.parseInt(conversionInput.getText());
         double value = Double.parseDouble(valueInput.getText());
-
+        
+        //if statments for the 4 choices
+        
         if (choice == 1)
         {
             conversionOutput.setText("The value is " + InchesToCentimeters(value) + "cm");
